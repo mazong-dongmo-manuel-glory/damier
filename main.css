@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#plateforme{
+    width: max-content;
+    height: 500px;
+    margin:5px  auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;   
+}
+#plateforme .line{
+    width: 100%;
+
+    display: flex;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#plateforme .box.active{
+    background: black;
+    width: 50px;
+    height: 50px;
+  
+}
+#plateforme .pion{
+    width: 80%;
+    height:80%;
+    border-radius: 45%;
+    transition: background-color 0.5s ease;
+}
+#plateforme .pion.north{
+    background-color: rgb(190, 85, 85);
+}
+#plateforme .pion.south{
+    background-color: white;
+}
+body #plateforme .pion.moving{
+    opacity: 0.5;
+}
+body #plateforme .box.active.road{
+    background:linear-gradient(45deg,rgb(245, 38, 38),rgb(197, 65, 65));
+}
+#plateforme .box.possible{
+    background: linear-gradient(45deg,deepskyblue,blue);
+    cursor: pointer;
+}
+
+@media  screen and (max-width:500px) {
+    #plateforme{
+        transform: scale(0.75);
+    }
+}
